@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mobile Dependency Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #4a148c;
+    }
+    form {
+      background: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input[type="text"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .submit-btn {
+      text-align: center;
+    }
+    input[type="submit"] {
+      background: #4a148c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #6a1b9a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📱 Mobile Dependency Survey</h1>
+
+  <form>
+    <!-- Section 1: Demographics -->
+    <div class="section">
+      <label>1. What is your age group?</label>
+      <select required>
+        <option value="">--Select--</option>
+        <option>Under 18</option>
+        <option>18–25</option>
+        <option>26–35</option>
+        <option>36–50</option>
+        <option>50+</option>
+      </select>
+
+      <label>2. Are you a parent?</label>
+      <input type="radio" name="parent" value="Yes">Yes
+      <input type="radio" name="parent" value="No">No
+    </div>
+
+    <!-- Section 2: Mobile Usage -->
+    <div class="section">
+      <label>3. How many hours do you use your mobile daily?</label>
+      <select required>
+        <option value="">--Select--</option>
+        <option>Less than 1 hour</option>
+        <option>1–3 hours</option>
+        <option>3–6 hours</option>
+        <option>More than 6 hours</option>
+      </select>
+
+      <label>4. What do you mostly use your phone for?</label>
+      <input type="checkbox" name="use" value="Social Media">Social Media<br>
+      <input type="checkbox" name="use" value="Work">Work/Emails<br>
+      <input type="checkbox" name="use" value="Videos">Watching Videos<br>
+      <input type="checkbox" name="use" value="Gaming">Gaming<br>
+      <input type="checkbox" name="use" value="Reading">Studying/Reading<br>
+      <input type="checkbox" name="use" value="Communication">Communication<br>
+
+      <label>5. Do you feel anxious when your phone is not around?</label>
+      <input type="radio" name="anxiety" value="Yes">Yes
+      <input type="radio" name="anxiety" value="No">No
+      <input type="radio" name="anxiety" value="Sometimes">Sometimes
+    </div>
+
+    <!-- Section 3: Children -->
+    <div class="section">
+      <label>6. Do your children use mobile phones or tablets?</label>
+      <input type="radio" name="children_use" value="Yes">Yes
+      <input type="radio" name="children_use" value="No">No
+      <input type="radio" name="children_use" value="NA">Not Applicable
+
+      <label>7. How many hours a day do they use it?</label>
+      <select>
+        <option value="">--Select--</option>
+        <option>Less than 1 hour</option>
+        <option>1–2 hours</option>
+        <option>2–4 hours</option>
+        <option>More than 4 hours</option>
+      </select>
+
+      <label>8. Do you believe mobile usage is affecting their behavior?</label>
+      <input type="radio" name="impact" value="Yes">Yes
+      <input type="radio" name="impact" value="No">No
+      <input type="radio" name="impact" value="Not Sure">Not Sure
+    </div>
+
+    <!-- Section 4: Final Opinion -->
+    <div class="section">
+      <label>9. Do you think mobile addiction is a real problem today?</label>
+      <select required>
+        <option value="">--Select--</option>
+        <option>Strongly agree</option>
+        <option>Agree</option>
+        <option>Neutral</option>
+        <option>Disagree</option>
+        <option>Strongly disagree</option>
+      </select>
+
+      <label>10. Would you support workshops on mobile addiction awareness?</label>
+      <input type="radio" name="support" value="Yes">Yes
+      <input type="radio" name="support" value="No">No
+      <input type="radio" name="support" value="Maybe">Maybe
+    </div>
+
+    <div class="submit-btn">
+      <input type="submit" value="Submit Survey">
+    </div>
+  </form>
+
+</body>
+</html>
