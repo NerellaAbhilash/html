@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Global Estate</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>The Global Estate</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-banner section">
+    <h1>Our Projects</h1>
+  </section>
+
+  <section class="project-list section">
+    <div class="project-card">
+      <img src="./images/shadnagar project.jpg" alt="" alt="Ongoing Project">
+      <h3>Plot at Shadnagar</h3>
+      <p><strong>Location:</strong> Shadnagar</p>
+      <p><strong>Status:</strong> Ongoing</p>
+      <p><strong>Amenities:</strong> Clubhouse, Pool, Gym, 24x7 Security</p>
+    </div>
+
+     <div class="project-card">
+      <img src="./images/Yadigirigutta Project.jpg" alt="Ongoing Project">
+      <h3>Plot at Yadagirigutta</h3>
+      <p><strong>Location:</strong> Yadadri</p>
+      <p><strong>Status:</strong> Ongoing</p>
+      <p><strong>Amenities:</strong> Clubhouse, Pool, Gym, 24x7 Security</p>
+    </div>
+    <div class="project-card">
+      <img src="./images/adibatla project.jpg" alt="Completed Project">
+      <h3>Plot at Adibatla</h3>
+      <p><strong>Location:</strong>Rangareddy</p>
+      <p><strong>Status:</strong> Completed 2023</p>
+      <p><strong>Amenities:</strong> Rooftop garden, Lift, CCTV Surveillance</p>
+    </div>
+    <!-- Add more cards -->
+  </section>
+
+ 
+  <footer>
+    <div>
+      <img src="./images/Logo-removebg-preview.png" alt="Logo" style="width:100%" />
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Subscribe</h4>
+      <form id="subscriberForm">
+      <input type="email" placeholder="Your email" required id="subscribe" />
+      <button>subscribe</button>
+      </form>
+  
+      <div style="margin-top: 10px;">
+        <a href="https://www.facebook.com/">Facebook</a> |
+        <a href="https://www.instagram.com/">Instagram</a> |
+        <a href="https://in.linkedin.com/">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+<script>
+  document.getElementById("subscriberForm").addEventListener("submit", function(event) {
+  //alert("event");
+  event.preventDefault(); // Prevent form from submitting normally
+
+  const email= document.getElementById("subscribe").value.trim();
+  
+
+  // Store in localStorage
+  const subscribeFormData = {
+    email: email,
+    submittedAt: new Date().toLocaleString()
+  };
+
+  localStorage.setItem("subscribeFormData", JSON.stringify(subscribeFormData));
+
+  alert("Your Email has been saved locally!");
+
+  // Optionally clear the form
+  this.reset();
+});
+</script>
+  <script src="js/script.js"></script>
+</body>
+</html>
